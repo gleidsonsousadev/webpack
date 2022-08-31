@@ -1,9 +1,15 @@
-import { dobro, bomDia, aluno } from "./nayra.js";
+import React from "react";
+import ReactDOM from "react-dom";
+
 import "./estilo.scss";
 import "bootstrap";
+import { bomDia } from './nayra.js'
 
-const teste = (i) => i * 2;
+const mensagem = bomDia('Bolsonaro')
 
-console.log(teste(5));
-console.log(bomDia(aluno));
-console.log(`o dobro de 10 é ${dobro(10)}`);
+ReactDOM.render(
+    <div className="react">
+        <h2>Isto aqui é REACT</h2>
+        <p>{mensagem}</p>
+    </div>,
+    document.querySelector('#app'))
